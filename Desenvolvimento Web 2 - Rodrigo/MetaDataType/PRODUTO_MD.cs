@@ -20,7 +20,7 @@ namespace Desenvolvimento_Web_2___Rodrigo.Models
         public decimal Valor { get; set; }
 
 
-        [DisplayName("Id da categoria")]
+        [DisplayName("Categoria")]
         [Required(ErrorMessage = "campo obrigatório")]
         public int CategoriaId { get; set; }
     }

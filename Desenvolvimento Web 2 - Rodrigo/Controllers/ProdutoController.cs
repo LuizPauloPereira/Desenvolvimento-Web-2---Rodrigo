@@ -20,6 +20,7 @@ namespace Desenvolvimento_Web_2___Rodrigo.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.CategoriaId = new SelectList(ctx.CATEGORIA.ToList(), "Id", "Descricao");
             return View();
         }
         [HttpPost]
