@@ -7,32 +7,32 @@ using System.Web.Mvc;
 
 namespace Desenvolvimento_Web_2___Rodrigo.Controllers
 {
-    public class CategoriaController : Controller
+    public class ProdutoController : Controller
     {
         DevWeb2Entities ctx = new DevWeb2Entities();
 
-        // GET: Categoria
+
+        // GET: Produto
         public ActionResult Index()
-        {            
-            return View(ctx.CATEGORIA.ToList());
+        {
+            return View(ctx.PRODUTO.ToList());
         }
 
         public ActionResult Create()
         {
             return View();
         }
-
         [HttpPost]
-        public ActionResult Create(CATEGORIA c)
+        public ActionResult Create(PRODUTO p)
         {
             if (ModelState.IsValid)
             {
-                ctx.CATEGORIA.Add(c);
+                ctx.PRODUTO.Add(p);
                 ctx.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(c);
+            return View(p);
         }
     }
 }
