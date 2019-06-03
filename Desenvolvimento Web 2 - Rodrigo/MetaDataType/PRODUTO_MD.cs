@@ -16,7 +16,7 @@ namespace Desenvolvimento_Web_2___Rodrigo.Models
 
         [DisplayName("Preço")]
         [Required(ErrorMessage = "campo obrigatório")]
-        [MaxLength(18, ErrorMessage ="Máximo 18 caractéres")]
+        //[MaxLength(18, ErrorMessage ="Máximo 18 caractéres")]
         public decimal Valor { get; set; }
 
 

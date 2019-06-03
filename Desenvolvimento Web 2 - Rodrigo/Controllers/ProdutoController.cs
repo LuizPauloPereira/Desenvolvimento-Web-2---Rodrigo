@@ -26,14 +26,9 @@ namespace Desenvolvimento_Web_2___Rodrigo.Controllers
         [HttpPost]
         public ActionResult Create(PRODUTO p)
         {
-            if (ModelState.IsValid)
-            {
-                ctx.PRODUTO.Add(p);
-                ctx.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(p);
+            ctx.PRODUTO.Add(p);
+            ctx.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
